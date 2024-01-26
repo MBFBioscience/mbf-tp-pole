@@ -9,7 +9,7 @@ set (POLE_FILES_HDR
 set (POLE_FILES_SRC
   pole.cpp)
 
-add_library(${PROJECT_NAME} OBJECT ${POLE_FILES_SRC})
+add_library(${PROJECT_NAME} ${POLE_FILES_SRC})
 
 ################################################################################
 # Header file set
@@ -28,7 +28,7 @@ target_include_directories(${PROJECT_NAME} PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")
 ################################################################################
 # Install
 ################################################################################
-install(TARGETS ${PROJECT_NAME} 
+install(TARGETS ${PROJECT_NAME}
         RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
         LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
         ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
